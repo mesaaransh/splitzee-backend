@@ -17,6 +17,10 @@ require('dotenv').config()
 connector();
 
 
+app.get('/', () => {
+    res.status(200).send('Working')
+})
+
 app.post('/verify', verify)
 app.post("/login", verifyUser)
 app.post("/user", newUser)
